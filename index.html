@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<title>Le New Délice</title>
+	<script src="code.js"></script>
+</head>
+
+
+<body>
+<!-------- navbar --------->
+
+<nav class="navbar">
+			<ul>
+			<li><a class="onglet" href="index.html">HOME</a></li>
+			<li class="dropdown"><a class="onglet" href="">LA CARTE</a>
+				<div class="dropdown-content">
+     			<a href="burger.html">BURGERS</a>
+      		<a href="#">SANDWICHS</a>
+      		<a href="#">TACOS</a>
+      		<a href="#">WRAPS</a>
+      		<a href="#">TEXMEX</a>
+      		<a href="#">DESSERTS</a>
+      	</div>
+      </li>
+			<li><a class="onglet" href="">CONTACT</a></li>
+	</ul>
+</nav>
+
+	<!-------- SIDEBAR --------->
+	<nav id="littlenavbar">
+			<button id="openNav" onclick="toggleNav()">&#9776;</button>
+	</nav>
+	
+	<nav id="mySidenav" class="sidenav">
+		<span class="closebtn" onclick="toggleNav()">&times;</span>
+  <a href="#">BURGERS</a>
+  <a href="#">SANDWICHS</a>
+  <a href="#">TACOS</a>
+  <a href="#">WRAP</a>
+  <a href="#">TEXMEX</a>
+  <a href="#">DESSERTS</a>
+</nav>
+
+
+<!-------- BODY CONTENT --------->
+
+
+
+<div id="bodyContent">
+<header>
+      <div class="intro">
+          <!-- <h4><span>"NEW DELICE</span> <span>!"</span></h4> -->
+          <h1>DECOUVREZ NOS MENUS</h1>
+          <button id="buttonCommandez">COMMANDEZ</button>
+
+      </div>
+
+</header>
+
+<section id="s1">
+	<div class="gallery">
+    				<img src="img/menusburgers.jpg" alt="Cinque Terre" width="300">
+  </div>
+
+  <div class="gallery">
+    				<img src="img/post2.jpg" alt="Cinque Terre" width="300">
+  </div>
+
+  <div class="gallery">
+    				<img src="img/menussandwichs.jpg" alt="Cinque Terre" width="300">
+  </div>
+</section>
+
+<footer>
+
+
+	
+</footer>
+
+
+</div>
+
+<script src="code.js"></script>
+</body>
+</html>
