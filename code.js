@@ -1,6 +1,6 @@
 
 
-
+// sidenav et controleur
 function toggleNav() {
    let sideNav = document.getElementById("mySidenav");
    let openNav = document.getElementById("openNav");
