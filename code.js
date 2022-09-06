@@ -19,20 +19,21 @@ function toggleNav() {
 }
 
 
-const allimgProduits = document.querySelectorAll(".imgproduit");
-for (i=0; i < allimgProduits.length; i++){
-  let imgProduit = allimgProduits[i];
-  imgProduit.addEventListener("mouseenter", function() {
-    this.classList.add("imgproduithover")
-  });
-  imgProduit.addEventListener("mouseleave", function() {
-    this.classList.remove("imgproduithover")
-  });
-  imgProduit.addEventListener("click", function() {
-        this.classList.remove("imgproduit:hover")
-        this.classList.toggle("imgproduitclick");
-  })
-}
+
+// const allimgProduits = document.querySelectorAll(".imgproduit");
+// for (i=0; i < allimgProduits.length; i++){
+//   let imgProduit = allimgProduits[i];
+//   imgProduit.addEventListener("mouseenter", function() {
+//     this.classList.add("imgproduithover")
+//   });
+//   imgProduit.addEventListener("mouseleave", function() {
+//     this.classList.remove("imgproduithover")
+//   });
+//   imgProduit.addEventListener("click", function() {
+//         this.classList.remove("imgproduit:hover")
+//         this.classList.toggle("imgproduitclick");
+//   })
+// }
 
 
 const buttonsSection = document.querySelectorAll(".buttonSection");

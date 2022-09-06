@@ -234,7 +234,7 @@ header h1{
     overflow-y: hidden;
     overflow-x: hidden;
     padding-top: 100px;
-    background-color: #ffd397;
+    background-color: #ffc87e;
 }
 
 .titlesection{
@@ -410,7 +410,14 @@ header .intro h4 span:last-child {
 
 
 
-
+#littlenavbar{
+    display: none;
+    width: 80px;
+    z-index: 800;
+    position: fixed;
+    top: 40px;
+    right: 30px;
+}
 
 
 
@@ -429,11 +436,7 @@ body {
 }
 
 #littlenavbar{
-    width: 80px;
-    z-index: 800;
-    position: fixed;
-    top: 40px;
-    right: 30px;
+    display: block;
 }
 }
 
