@@ -248,7 +248,7 @@ header h1{
     margin-left: auto;
 }
 
-.allsection{
+.section{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -257,7 +257,7 @@ header h1{
 
 .rayonLink{
     position: relative;
-    width: calc(50% - 15px);
+    width: calc(50% - 20px);
     max-width: 300px;
     height: auto;
     margin: 5px;
