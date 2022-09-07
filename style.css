@@ -9,6 +9,10 @@
     font-style: normal;
 }
 
+*{
+    text-decoration: none;
+    list-style: none;
+}
 body{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -172,10 +176,6 @@ body{
     cursor: pointer;
 }
 
-#bodyContent{
-    transition: filter 0.5s ease;
-}
-
 .pushBody{
     filter: brightness(0.5) ;
     filter: blur(9px);
@@ -230,34 +230,76 @@ header h1{
 
 /*--------------RAYONS-------------*/
 
-.container{
-    overflow-y: hidden;
-    overflow-x: hidden;
-    padding-top: 100px;
+
+#bodyContent{
+    display: flex;
     background-color: #ffc87e;
+    transition: filter 0.5s ease;
+}
+
+.container{
+    align-items: center;
+    margin: 0 20px;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.allrayons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rayonLink{
+    position: relative;
+    width: calc(50% - 15px);
+    max-width: 300px;
+    height: auto;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 13px;
+    box-shadow: 0px 2px 3px #0000009e;
+}
+
+
+.rayonLink img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    height: auto;
+    margin: 0px;
+    padding: 0;
+    border-radius: 30px;;  
+    transition: transform 1s ease;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
 
 .titlesection{
     color: #1c1c1c;
     font-family: 'Subtlecurves';
     font-size: 60px;
-    margin-left: 51px;
     transform: matrix3d(1, -0.04, 0, 0, -0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 
 
 .rayon{
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-flow: row wrap;
 }
 
 .produit{
     position: relative;
-    width: calc(50% - 15px);
-    max-width: 300px;
+    width: calc(50% - 10px);
     margin: 5px;
-
     background-color: #ffffff;
     border-radius: 13px;
     box-shadow: 0px 2px 3px #0000009e;
@@ -296,45 +338,6 @@ header h1{
     transform: scale(0.90);
 }
 
-/*.produit::before{
-    position: absolute;
-    content: url(img/info.png);
-    opacity: 0.5;
-    scale: 0.04;
-    height: 0;
-    transition: 1s ease;
-}*/
-
-/*.produit:hover::before{
-    scale: 0;
-}*/
-
-/*.fondproduit {
-    position: absolute;
-    left: 54px;
-    width: 190px;
-    height: 0px;
-    background-color: #0000003d;
-    border-radius: 10px;
-    transition: 0.5s ease;
-}*/
-
-/*.showinfos {
-    height: 160px;
-}*/
-
-/*---------------------------*/
-
-/*#s1{
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}*/
-
-
-
 
 /*--------------FOOTER-------------*/
 footer{
@@ -344,6 +347,90 @@ footer{
     height: 200px;
     background-color: #1C1C1C; ;
 }
+
+
+#buttonCommandez{
+    font-size: 20px ;
+    font-family: 'Fredoka One', cursive;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 6px 12px;
+    background-color:#1A1A1A;
+    color: white;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+}
+
+#buttonCommandez:hover{
+    background-color: darkorange;
+}
+
+
+
+#littlenavbar{
+    display: none;
+    width: 80px;
+    z-index: 800;
+    position: fixed;
+    top: 40px;
+    right: 30px;
+}
+
+
+/*
+
+1280px - 968px
+image 3/1
+
+
+654
+
+
+*/
+
+@media screen and (min-width: 650px){
+
+.produit{
+    width: calc(33% - 14px);
+    margin: 8px;
+}
+}
+
+@media screen and (min-width: 960px){
+
+.produit{
+    width: calc(25% - 16px);
+    margin: 8px;
+}
+}
+
+
+/*--------------SCREEN 600-------------*/
+@media screen and (max-width: 600px){
+
+body {
+    overflow-x: hidden;
+}
+#logo{
+    display: none;
+}
+
+.navbar{
+    display: none;
+}
+
+#littlenavbar{
+    display: block;
+}
+}
+
+@media screen and (min-width: 600px){
+
+
+}
+
+
 
 /*.intro h4{
     font-family: "SubtleCurves", sans-serif;
@@ -390,59 +477,4 @@ header .intro h4 span:last-child {
     transform: scale(1) rotateZ(-3deg);
   }
 }*/
-
-#buttonCommandez{
-    font-size: 20px ;
-    font-family: 'Fredoka One', cursive;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 6px 12px;
-    background-color:#1A1A1A;
-    color: white;
-    border-radius: 25px;
-    outline: none;
-    cursor: pointer;
-}
-
-#buttonCommandez:hover{
-    background-color: darkorange;
-}
-
-
-
-#littlenavbar{
-    display: none;
-    width: 80px;
-    z-index: 800;
-    position: fixed;
-    top: 40px;
-    right: 30px;
-}
-
-
-
-/*--------------SCREEN 600-------------*/
-@media screen and (max-width: 600px){
-
-body {
-    overflow-x: hidden;
-}
-#logo{
-    display: none;
-}
-
-.navbar{
-    display: none;
-}
-
-#littlenavbar{
-    display: block;
-}
-}
-
-@media screen and (min-width: 600px){
-
-
-}
-
 
