@@ -36,6 +36,7 @@ function toggleNav() {
 // }
 
 
+
 const buttonsSection = document.querySelectorAll(".buttonSection");
 for (i=0; i < buttonsSection.length; i++){
   let buttonSection = buttonsSection[i];
