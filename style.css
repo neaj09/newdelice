@@ -10,9 +10,9 @@
 }
 
 *{
-    overflow-x: hidden;
     text-decoration: none;
     list-style: none;
+
 }
 body{
     margin: 0 0 0 0;
@@ -211,7 +211,9 @@ header h1{
 
 .intro{
     position: relative;
-    background-color: #f68e51;
+    background-image: url("img/cloud.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -219,25 +221,30 @@ header h1{
 
 .intro h1{
     transform: matrix3d(1, -0.04, 0, 0, -0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    z-index: 999;
-    position: absolute;
-    top: 200px;
-    font-size: 8vw;
+    z-index: 100;
+    position: fixed;
+    top: 250px;
+    font-size: 50px;
     font-family: 'Subtlecurves';
 
 }
 
 .intro img{
-    position: absolute;
+    
     width: 100%;
 }
-
+/*
 #bgorange{
-    top: 440px;
+    position: absolute;
+    top: 95vh;*/
 }
 
+#cloud{
+    height: 100vh;
+}
 
 #logointro{
+    position: absolute;
     width: 200px;
     top: 30px;
     left: 15px;
@@ -245,10 +252,38 @@ header h1{
     transform: rotate(0.97turn);
 }
 
-.btnintro{
+#fritefly1{
     position: absolute;
-    top: 330px;
-    z-index: 800;
+    z-index: 101;
+    width: 75px;
+    top: 800px;
+    right: 40px;
+}
+
+#fritefly2{
+    position: absolute;
+    z-index: 99;
+    width: 90px;
+    top: 200px;
+    left: 20px;
+
+}
+
+#fritefly3{
+    position: absolute;
+    z-index: 99;
+    width: 50px;
+    top: 370px;
+    left: 100px;
+    transform: rotate(235deg);
+}
+
+
+
+.btnintro{
+    position: fixed;
+    top: 390px;
+    z-index: 150;
     font-size: 20px;
     font-family: 'Subtlecurves', cursive;
     padding: 6px 12px;
@@ -261,11 +296,23 @@ header h1{
 }
 
 .btnintro:hover{
+    bottom: 0;
     background-color: #ffbd6c;
 }
 
 
+.sectionPub{
+    z-index: 200;
+    position: relative;
+    height: 500px;
 
+}
+
+.sectionPub::before{
+    position: absolute;
+    content: url("img/bgorange.svg");
+    top: -70px;
+}
 
 
 

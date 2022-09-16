@@ -1,5 +1,21 @@
 
 
+// intro
+
+
+
+window.addEventListener("scroll", function(){
+  let frite = document.getElementById("fritefly1");
+  let frite2 = document.getElementById("fritefly2");
+  let frite3 = document.getElementById("fritefly3");
+  let value = window.scrollY; 
+  frite.style.top = 800 + value *-1.3 + "px";
+  frite2.style.top = 850 + value *-2.3 + "px";
+  frite3.style.top = 880 + value *-1.5 + "px";
+  })
+
+
+
 // sidenav et controleur
 function toggleNav() {
    let sideNav = document.getElementById("mySidenav");
@@ -15,35 +31,9 @@ function toggleNav() {
 
  function closeNav() {
   sideNav.classList.toggle("open");
-  openNav.classList.toggle("hide")
+  openNav.classList.toggle("hide");
 }
 
-
-
-// const allimgProduits = document.querySelectorAll(".imgproduit");
-// for (i=0; i < allimgProduits.length; i++){
-//   let imgProduit = allimgProduits[i];
-//   imgProduit.addEventListener("mouseenter", function() {
-//     this.classList.add("imgproduithover")
-//   });
-//   imgProduit.addEventListener("mouseleave", function() {
-//     this.classList.remove("imgproduithover")
-//   });
-//   imgProduit.addEventListener("click", function() {
-//         this.classList.remove("imgproduit:hover")
-//         this.classList.toggle("imgproduitclick");
-//   })
-// }
-
-
-
-const buttonsSection = document.querySelectorAll(".buttonSection");
-for (i=0; i < buttonsSection.length; i++){
-  let buttonSection = buttonsSection[i];
-buttonSection.addEventListener("click", function openSection(){
-  this.nextElementSibling.classList.toggle("hide")
-})
-}
 
 
 
