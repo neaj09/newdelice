@@ -5,6 +5,7 @@
 
 
 window.addEventListener("scroll", function(){
+  let introtxt = document.getElementById("introtxt");
   let frite = document.getElementById("fritefly1");
   let frite2 = document.getElementById("fritefly2");
   let frite3 = document.getElementById("fritefly3");
@@ -15,7 +16,9 @@ window.addEventListener("scroll", function(){
   frite2.style.top = 850 + value *-2.3 + "px";
   frite3.style.top = 880 + value *-1.5 + "px";
   caprisun.style.top = 800 + value *-2.5 + "px";
-  fire.style.top = 850 + value *-0.6 + "px";
+  introtxt.style.fontSize = 50 + value *0.02 + "px";
+
+
   })
 
 
