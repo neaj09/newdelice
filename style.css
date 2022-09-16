@@ -219,6 +219,12 @@ header h1{
     justify-content: center;
 }
 
+
+.intro img {
+    transition: top 1.3s cubic-bezier(0, 0, 0.07, 1);
+}
+
+
 .intro h1{
     transform: matrix3d(1, -0.04, 0, 0, -0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     z-index: 100;
@@ -229,15 +235,6 @@ header h1{
 
 }
 
-.intro img{
-    
-    width: 100%;
-}
-/*
-#bgorange{
-    position: absolute;
-    top: 95vh;*/
-}
 
 #cloud{
     height: 100vh;
@@ -278,6 +275,12 @@ header h1{
     transform: rotate(235deg);
 }
 
+#caprisun{
+    height: 190px;
+    top: 260px;
+    left: 130px;
+    position: absolute;
+}
 
 
 .btnintro{
