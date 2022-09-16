@@ -11,15 +11,15 @@ window.addEventListener("scroll", function(){
   let frite3 = document.getElementById("fritefly3");
   let caprisun = document.getElementById("caprisun");
   let fire = document.getElementById("fire");
-  let value = window.scrollY; 
+  let value = window.scrollY;
+  if (value <500){ 
   frite.style.top = 800 + value *-1.3 + "px";
   frite2.style.top = 850 + value *-2.3 + "px";
   frite3.style.top = 880 + value *-1.5 + "px";
   caprisun.style.top = 800 + value *-2.5 + "px";
-  introtxt.style.fontSize = 50 + value *0.02 + "px";
-
-
+  introtxt.style.fontSize = 50 + value *0.02 + "px";}
   })
+
 
 
 

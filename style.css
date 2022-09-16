@@ -328,9 +328,25 @@ header h1{
     background-size: 100%;
 }
 
+#wrapPub{
+    margin-top: 30px;
+    margin-left: -30px;
+    width: 84%;
+    max-width: 450px;
+}
 
+#arrow{
+    position: absolute;
+    display: inline-block;
+    width: 61px;
+    top: 140px;
+    right: 30px;
+    filter: invert(1);
+}
 
-
+#arrow:hover{
+    transform: scale(1.1);
+}
 
 
 .gallery{
