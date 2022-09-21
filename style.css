@@ -234,6 +234,7 @@ header h1{
     font-family: 'Subtlecurves';
     white-space: nowrap;
     text-align: center;
+    transition: 0.3s ease;
 
 }
 
@@ -285,7 +286,7 @@ header h1{
 }
 
 
-.btnintro{
+#btnintro{
     position: fixed;
     top: 390px;
     z-index: 150;
@@ -552,6 +553,40 @@ body {
 
 }
 
+#coupdemidi{
+top: 54%;
+    position: fixed;
+    z-index: 999999999999999;
+    left: 30%;
+    width: 230px;
+    height: 230px;
 
+}
+
+#coupdemidibox{
+     background-image: url(lomepal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+
+.cacheimg{
+    float: left;
+    width: calc(33.3333% - 2px);
+    background-color: darkred;
+    margin: 0;
+    border: 1px solid white;
+    height: calc(33% - 1px);
+    transition: opacity 2s ease;
+}
+
+.cacheimg:hover{
+    background-color: red;
+}
+
+#imgmidi{
+    width: 100%;
+}
 
 
