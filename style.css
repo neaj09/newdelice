@@ -624,6 +624,13 @@ footer{
     display: flex;
 }
 
+#iconCall{
+    fill:white;
+    /* width: 440px; */
+    height: 35px;
+    width: auto;
+}
+
 #mobileBar a{
     color:white
 }
