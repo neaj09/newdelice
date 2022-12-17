@@ -7,6 +7,11 @@
         url('SubtleCurves.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
+    font-family: 'Anton';
+    src:url('AntonRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *{
@@ -143,7 +148,7 @@ body{
 
 
 .hide{
-    transform: scale(0);
+    transform: scale(0); 
     opacity: 0;
 }
 
@@ -481,12 +486,23 @@ position: absolute;
     flex-flow: row wrap;
 }
 
-.produit{
+/*.produit{
     position: relative;
     width: calc(50% - 14px);
     margin: 5px;
     border: solid 2px #e0a463;
     border-radius: 8px;
+}*/
+
+.produit{
+    overflow: hidden;
+    /* display: inline-grid; */
+    position: relative;
+    width: calc(50% - 14px);
+    border: solid 2px #e0a463;
+    border-radius: 8px;
+    margin: 5px;
+    align-content: center;
 }
 
 /*.produit::before{
@@ -504,20 +520,24 @@ position: absolute;
 }*/
 
 
-.produit:hover::before, .produit:focus::before{
-    transform: scale(1.5);
 
-}
-
-
-.info{
-    font-family: 'Subtlecurves';
-    font-size: 13px;
-    color: rgb(171 91 30);
+.infos{
+    overflow: hidden;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #e0a463;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .imgproduit{
-    width: 95%;
+    width: 100%;
     max-width: 300px;
     display: block;
     margin-left: auto;
@@ -526,7 +546,7 @@ position: absolute;
 }
 
 
-.titleproduit {
+/*.titleproduit {
     font-family: 'Subtlecurves';
     font-size: 21px;
     margin-top: -12px;
@@ -534,17 +554,38 @@ position: absolute;
     text-align: center;
     color: white;
     line-height: 25px;
+}*/
+
+.titleandinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-
-.imgproduit:hover {
-    transform: scale(0.9)
+.titleproduit{
+    font-family: 'Subtlecurves';
+    font-size: calc(14px + 1.5vw);
+    margin: 0 0 0px 0;
+    color: white;
+    padding: 0;
 }
 
-.imgproduitclick{
-    transform: scale(0.90);
+.info{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton';
+    font-size: calc(6px + 1.5vw);
+    color: rgb(76 58 50);
+    text-transform: uppercase;
+    justify-content: flex-start;
 }
 
+.prix{
+    font-size: calc(14px + 1.5vw);
+    font-family: 'Subtlecurves';
+    margin: 0 0 0 5px;
+    color: #4c3a32;
+}
 
 /*--------------FOOTER-------------*/
 footer{
@@ -553,9 +594,6 @@ footer{
     height: 200px;
     background-color: #1C1C1C; ;
 }
-
-
-
 
 
 
@@ -582,32 +620,19 @@ footer{
     padding-left: 28px;
 }
 
-
-
-@media screen and (min-width: 650px){
-
-.produit{
-    width: calc(33% - 18px);
-    margin: 8px;
-}
-}
-
-@media screen and (min-width: 960px){
-
-.produit{
-    width: calc(25% - 20px);
-    margin: 8px;
-}
-
-
-}
-
-
-/*--------------SCREEN 600-------------*/
-@media screen and (max-width: 600px){
+/*-------------- SCREEN inférieur à 600 -------------*/
+@media screen and (max-width: 650px){
 
 body {
     overflow-x: hidden;
+}
+
+.navbar{
+    display: none;
+}
+
+#littlenavbar{
+    display: block;
 }
 
 #mobileBar{
@@ -623,18 +648,27 @@ display: flex;
     font-size: 20px;
 }
 
-.navbar{
-    display: none;
 }
 
-#littlenavbar{
-    display: block;
+/*-------------- SCREEN 650 à 960 -------------*/
+@media screen and (min-width: 650px){
+
+.produit{
+    width: calc(33% - 18px);
+    margin: 8px;
+}
+}
+
+/*-------------- SCREEN supérieur 960 -------------*/
+@media screen and (min-width: 960px){
+
+.produit{
+    width: calc(25% - 20px);
+    margin: 8px;
 }
 
 
 }
 
-@media screen and (min-width: 600px){
 
 
-}
