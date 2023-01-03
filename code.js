@@ -1,5 +1,4 @@
 
-
 // intro
 
 
@@ -253,29 +252,34 @@ function toggleNav() {
         contentHTML = '<p>Contenu HTML pour les desserts</p>';
 
         break;
-}
+     }
 
 
     // Affiche le contenu HTML dans le div avec l'identifiant "content"
   document.getElementById('content').innerHTML = contentHTML;
 
-window.addEventListener('popstate', function(event) {
-  // Récupère l'identifiant de contenu à partir de l'objet d'état
-  const contentId = event.state.contentId;
-  // Affiche le contenu correspondant en utilisant la fonction showContent
-  showContent(contentId);
-});
 
+  history.replaceState({}, '', '?content=' + contentId);
 }
 
-    
-//   // Modifie l'URL en ajoutant l'identifiant de contenu à l'historique du navigateur
-//   window.history.pushState({ contentId: contentId }, '', `?contentId=${contentId}`);
 
 
-window.onload = function() {
-  showContent('burgers');
-};
+window.addEventListener('load', function() {
+   let contentId = new URL(location).searchParams.get('content');
+  // Si le paramètre "content" existe, afficher le contenu correspondant
+  if (contentId!==null) {
+    showContent(contentId);
+  }
+});
+
+window.addEventListener('popstate', function(event) {
+  // Actualiser la page pour afficher le contenu correspondant à l'URL de la page
+  location.reload();
+});
+
+
+
+
 
 
 
